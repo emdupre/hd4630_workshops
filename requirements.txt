@@ -1,0 +1,2 @@
+nipype>=0.12.1
+nilearn>=0.2.6
