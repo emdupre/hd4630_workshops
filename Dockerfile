@@ -8,21 +8,21 @@ MAINTAINER Elizabeth DuPre
 ENV HOME /home
 
 # Update the sources list and install basic applications
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
 tar \
-git \
 curl \
 nano \
-wget \
 dialog \
-net-tools \ 
+# net-tools \ 
 build-essential \
-unzip \
+unzip 
 
 # AFNI dependencies
-tcsh \ 
-libxp6 \ 
-xfonts-base \ 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+tcsh \
+libxp6 \
+xfonts-base \
 python-qt4 \
 libmotif4 \
 libmotif-dev \
@@ -31,73 +31,64 @@ gsl-bin \
 netpbm \
 gnome-tweak-tool \
 libjpeg62 \
-
-# Dependencies for python libs
+libglu1 \
 libpng-dev \
+libxext-dev \
+libxrender-dev \
+libxtst-dev \
 freetype* \
 libfreetype6-dev \
 liblapack-dev \
 libatlas-base-dev \
 gfortran \
 pkg-config \
-software-properties-common \
-
-# Install Python and various packages
-python \
-python-dev \ 
-python-distribute \ 
-python-pip \
-python-numpy \ 
-python-scipy \
-python-matplotlib \ 
-ipython \ 
-ipython-notebook \ 
-python-pandas \ 
-python-sympy \
-python-lxml \
-python-tk
-
-
-# Get pip to download and install requirements:
-ADD requirements.txt hd4630_workshops/requirements.txt
-WORKDIR hd4630_workshops
-RUN pip install -r requirements.txt
-
-
-ADD . hd4630_workshops
+software-properties-common
 
 
 # download AFNI binaries
-RUN touch /root/.bashrc
-RUN touch /root/.bash_profile
+RUN touch /home/.bashrc
+RUN touch /home/.bash_profile
 RUN curl -O https://afni.nimh.nih.gov/pub/dist/bin/linux_fedora_21_64/@update.afni.binaries
 RUN tcsh @update.afni.binaries -package linux_openmp_64 -do_extras
 
 
 # set up R binaries
 RUN mkdir /home/R
-RUN echo 'export R_LIBS=/home/R' >> /root/.bashrc
+RUN echo 'export R_LIBS=/home/R' >> /home/.bashrc
 RUN curl -O https://afni.nimh.nih.gov/pub/dist/src/scripts_src/@add_rcran_ubuntu.tcsh
 RUN sudo tcsh @add_rcran_ubuntu.tcsh
 RUN /home/abin/rPkgsInstall -pkgs ALL
 
+# Install missing R dependencies
+RUN R -e 'install.packages("afex", repos = "http://cran.us.r-project.org")'
+RUN R -e 'install.packages("phia", repos = "http://cran.us.r-project.org")'
+RUN R -e 'install.packages("snow", repos = "http://cran.us.r-project.org")'
+RUN R -e 'install.packages("lme4", repos = "http://cran.us.r-project.org")'
+RUN R -e 'install.packages("paran", repos = "http://cran.us.r-project.org")'
+RUN R -e 'install.packages("psych", repos = "http://cran.us.r-project.org")'
+
 
 # Default AFNI profile settings
 RUN cp /home/abin/AFNI.afnirc /home/.afnirc
-RUN echo 'export PATH=$PATH:/home/abin' >> /root/.bash_profile
-RUN echo 'export DYLD_FALLBACK_LIBRARY_PATH=/home/abin' >> /root/.bash_profile
-RUN /bin/bash -c "source /root/.bashrc"
-RUN /bin/bash -c "source /root/.bash_profile" 
+RUN echo 'export PATH=$PATH:/home/abin' >> /home/.bash_profile
+RUN echo 'export DYLD_FALLBACK_LIBRARY_PATH=/home/abin' >> /home/.bash_profile
+RUN echo "source /home/.bashrc" >> /etc/bash.bashrc
+RUN echo "source /home/.bash_profile" >> /etc/bash.bashrc
 
 
-# X11 Access
-ENV USERNAME developer
+# X11 installation 
 RUN export uid=1000 gid=1000 && \
-    mkdir -p /home/developer && \
-    echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
-    echo "developer:x:${uid}:" >> /etc/group && \
-    echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
-    chmod 0440 /etc/sudoers.d/developer && \
-    chown ${uid}:${gid} -R /home/developer
+    mkdir -p /home/student && \
+    echo "student:x:${uid}:${gid}:Student,,,:/home/student:/bin/bash" >> /etc/passwd && \
+    echo "student:x:${uid}:" >> /etc/group && \
+    echo "student ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/student && \
+    chmod 0440 /etc/sudoers.d/student && \
+    chown ${uid}:${gid} -R /home/student
 
+
+# Set new environmental variables
+USER student
+WORKDIR /home/student
+RUN mkdir /home/student/data
+RUN mkdir /home/student/code
 
