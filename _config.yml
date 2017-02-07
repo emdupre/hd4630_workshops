@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Workshop materials for Cornell HD4630: Introduction to 
   Functional MRI analysis.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "emdupre.github.io/hd4630_workshops/" 
 twitter_username: emdupre_
 github_username:  emdupre
 
