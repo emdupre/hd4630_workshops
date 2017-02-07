@@ -9,5 +9,5 @@ unzip ds000164_R1.0.0.zip
 rm ds000164_R1.0.0.zip
 
 mkdir $HOME/Desktop/hd4630_workshops/data
-mv ds102_R2.0.0 $HOME/Desktop/hd4630_workshops/data/Flanker_task
-mv ds000164_R1.0.0 $HOME/Desktop/hd4630_workshops/data/Stroop_task
+mv ds102_R2.0.0 $HOME/Desktop/hd4630_workshops-master/data/Flanker_task
+mv ds000164_R1.0.0 $HOME/Desktop/hd4630_workshops-master/data/Stroop_task
