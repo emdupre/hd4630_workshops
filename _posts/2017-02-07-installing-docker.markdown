@@ -2,7 +2,7 @@
 layout: post
 title:  "Installing Docker and X11"
 date:   2017-02-07 12:05:34 -0500
-categories: getting started
+categories: ['Getting Started']
 ---
 
 In this class we'll be using [software containerization][digital-ocean] to run our image processing software, [AFNI][afni]. You'll need to have a few dependencies installed to have this running. 

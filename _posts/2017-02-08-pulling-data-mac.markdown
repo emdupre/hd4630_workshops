@@ -2,7 +2,7 @@
 layout: post
 title:  "Downloading Data on a Mac"
 date:   2017-02-08 9:50:34 -0500
-categories: getting started
+categories: ['Getting Started']
 ---
 
 The next piece we need is the data to analyze. We'll be using publicly available data from [OpenfMRI][open]. Specifically, we'll be working with
