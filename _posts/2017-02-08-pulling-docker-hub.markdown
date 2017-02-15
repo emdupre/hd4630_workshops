@@ -9,7 +9,7 @@ Now that Docker is up and running, we need to pull the Docker image we'll be usi
 
 People make Docker images containing many different kinds of software, and then they are publicly hosted on [Docker Hub][hub]. We need to pull the image that contains the AFNI setup we'll need for this class. It's available on Docker Hub as [emdupre/hd4630_workshops][image]. 
 
-To get this image,  you'll need to start a new Terminal (on Mac) or PowerShell (on Windows) with Docker running. Check back to the Docker installation instructions in the previous post if you need help downloading Docker. You can verify that Docker is running by entering the command 
+To get this image,  you'll need to start a new Docker Quickstart Terminal (if you're using Docker Toolbox) or Terminal with Docker running (if you're using Docker for Mac). Check back to the Docker installation instructions in the previous post if you need help downloading Docker. You can verify that Docker is running by entering the command 
 {% highlight bash %}
 docker --version
 {% endhighlight %}
