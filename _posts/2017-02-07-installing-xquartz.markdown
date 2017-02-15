@@ -9,10 +9,10 @@ After you've installed Docker or Docker Toolbox, you'll also need to install an 
 
 Follow the setup instructions provided with the installation, then open a new XQuartz session. We need to change our preferences for XQuartz, so go ahead and select 'Preferences' on the XQuartz menu.
 
-![XQuartz Preferences](../assets/XQuartz_Preferences.png)
+![XQuartz Preferences](/hd4630_workshops/assets/XQuartz_Preferences.png)
 
 Then click on the 'Security' tab and check the option to "Allow connections from network clients."
 
-![XQuartz Allow](../assets/XQuartz_Allow.png)
+![XQuartz Allow](/hd4630_workshops/assets/XQuartz_Allow.png)
 
 Finally, restart your computer to make sure all of the settings take effect. Once you log back in, we can start downloading the data! We'll cover that in the next post.
