@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Downloading Data on a Mac"
+title:  "Downloading Data on Mac"
 date:   2017-02-08 9:50:34 -0500
 categories: ['Getting Started']
 ---

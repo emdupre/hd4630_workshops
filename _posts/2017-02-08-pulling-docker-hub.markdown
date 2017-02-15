@@ -14,7 +14,7 @@ To get this image,  you'll need to start a new Terminal (on Mac) or PowerShell (
 docker --version
 {% endhighlight %}
 
-If a Docker version lists successfully, you're ready to go to the next step. We need to pull our image (all 3.8GB of it) from Docker Hub. This is something you should let run for about 15-20 minutes, so block out time to go get a coffee. The command to pull the image is
+If a Docker version lists successfully, you're ready to go to the next step. We need to pull our image (all 3.8GB of it) from Docker Hub. This is something you should let run for about 10-15 minutes, so block out time to go get a coffee. The command to pull the image is
 {% highlight bash %}
 docker pull emdupre/hd4630_workshops
 {% endhighlight %}
