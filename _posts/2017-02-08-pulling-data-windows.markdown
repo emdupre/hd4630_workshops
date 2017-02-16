@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Downloading Data on Windows"
-date:   2017-02-08 9:50:35 -0500
-categories: ['Getting Started']
+date:   2017-02-11 9:50:35 -0500
+categories: ['Getting Started for Windows']
 ---
 
 The next piece we need is the data to analyze. We'll be using publicly available data from [OpenfMRI][open]. Specifically, we'll be working with

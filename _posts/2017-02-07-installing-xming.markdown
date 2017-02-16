@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Installing Xming on Windows"
-date:   2017-02-07 12:05:35 -0500
-categories: ['Getting Started']
+date:   2017-02-13 12:05:35 -0500
+categories: ['Getting Started for Windows']
 ---
 
 After you've installed Docker or Docker Toolbox, you'll also need to install an X11 system; this will let us see the output for each of our analyses in AFNI. If you're on a Windows, you'll need to install [Xming](https://sourceforge.net/projects/xming/){:target="_blank"}. 

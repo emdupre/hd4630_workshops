@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Installing XQuartz on Mac"
-date:   2017-02-07 12:05:34 -0500
-categories: ['Getting Started']
+date:   2017-02-13 12:05:34 -0500
+categories: ['Getting Started for Mac']
 ---
 
 After you've installed Docker or Docker Toolbox, you'll also need to install an X11 system; this will let us see the output for each of our analyses in AFNI. If you're on a Mac OSX, you'll need to install [XQuartz](https://www.xquartz.org/){:target="_blank"}. 

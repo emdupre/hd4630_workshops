@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Pulling from Docker Hub"
-date:   2017-02-08 9:45:34 -0500
-categories: ['Getting Started']
+date:   2017-02-12 9:45:34 -0500
+categories: ['Getting Started for Mac', 'Getting Started for Windows']
 ---
 
 Now that Docker is up and running, we need to pull the Docker image we'll be using in this class. 

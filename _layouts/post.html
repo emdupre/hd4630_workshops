@@ -5,12 +5,13 @@ layout: default
 	<h2>{{ page.title }}</h2>      
     
     <div class="post-categories">
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>  &emsp;&ensp;
         {% assign categories = page.categories %}
         {% for category in categories %}
         <a href="{{site.baseurl}}/categories#{{category|slugize}}">{{ category }}</a>
         {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
+        <!-- <br> -->
+        <!-- <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>  -->
     </div>
     <p></p>
     <div class="content">
