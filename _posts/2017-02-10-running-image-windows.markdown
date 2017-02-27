@@ -12,7 +12,7 @@ If you're on Windows, there are two scripts to help you do this in the `\setup\w
 First, you'll need to open a CMD (command prompt) terminal to run the `windows_ip.exe` script. In the CMD terminal, issue the commands
 {% highlight batch %}
 cd %UserProfile%\hd4630_workshops-master
-setup\windows\windows_ip.exe
+setup\windows\windows_ip.cmd
 {% endhighlight %}
 
 This should output your IP address to the CMD terminal. Save that IP address, as we'll need to use it later. 
