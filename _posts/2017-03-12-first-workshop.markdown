@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "First Workshop"
-date:   2017-03-7 9:45:34 -0500
+date:   2017-03-12 9:45:34 -0500
 categories: ['In Class Exercises']
 ---
 
