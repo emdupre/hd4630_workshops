@@ -9,7 +9,7 @@ This workshops series is designed to accompany [Nathan Spreng](http://lbc.human.
 * Source code for a Docker image containing an AFNI environment
 * Shells scripts for getting and using data
 * Jupyter notebook(s) demonstrating basic image preprocessing
-* [A course website](https://emdupre.github.io/hd4630_workshops/) that walks through using this material
+* [A course website](https://emdupre.github.io/hd4630_workshops/categories) that walks through using this material
 * More to come...
 
 ### What should I do?
