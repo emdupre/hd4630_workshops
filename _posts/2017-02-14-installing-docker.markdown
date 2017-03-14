@@ -5,7 +5,7 @@ date:   2017-02-14 12:05:34 -0500
 categories: ['Getting Started for Mac', 'Getting Started for Windows']
 ---
 
-In this class we'll be using [software containerization][digital-ocean] to run our image processing software, [AFNI][afni]. You'll need to install a few dependencies to get this running. 
+In this workshop series we'll be using [software containerization][digital-ocean] to run our image processing software, [AFNI][afni]. For more detail on Docker and AFNI, check out the [slides][slides] from our introductory session. Here, we'll walk through the dependencies you'll need to install to get these running. 
 
 The first of these is Docker, which will host AFNI. The version of Docker you'll need will vary by your operating system. For ease, the versions of Docker necessary for each of the common operating systems are listed below: 
 
@@ -18,3 +18,4 @@ Please download the version that's appropriate for your computer and operating s
 
 [digital-ocean]: https://www.digitalocean.com/community/tutorials/the-docker-ecosystem-an-overview-of-containerization
 [afni]: https://afni.nimh.nih.gov/afni/
+[slides]: https://github.com/emdupre/hd4630_workshops/blob/master/slides/hd4630-workshops-intro.pdf
