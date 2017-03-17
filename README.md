@@ -8,9 +8,8 @@ This workshops series is designed to accompany [Nathan Spreng](http://lbc.human.
 * LaTeX presentations of desired workshop outcomes
 * Source code for a Docker image containing an AFNI environment
 * Shells scripts for getting and using data
-* Jupyter notebook(s) demonstrating basic image preprocessing
+* Jupyter notebook(s) demonstrating basic image preprocessing with python
 * [A course website](https://emdupre.github.io/hd4630_workshops/categories) that walks through using this material
-* More to come...
 
 ### What should I do?
 Clone or download this repository. All relative paths assume that this repo will live on your desktop, so please put it there or you won't be able to access your data! You can also update the shell scripts with your preferred path, if you'd prefer. 
