@@ -7,8 +7,7 @@ This workshops series is designed to accompany [Nathan Spreng](http://lbc.human.
 ### What's included?
 * LaTeX presentations of desired workshop outcomes
 * Source code for a Docker image containing an AFNI environment
-* Shells scripts for getting and using data
-* Jupyter notebook(s) demonstrating basic image preprocessing with python
+* Shell and python scripts for getting and using data
 * [A course website](https://emdupre.github.io/hd4630_workshops/categories) that walks through using this material
 
 ### What should I do?
